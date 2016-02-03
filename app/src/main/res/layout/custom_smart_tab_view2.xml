@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/tab_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Contact"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="@dimen/_13sdp"
+        android:textColor="@drawable/selected_tab_text_2"
+        android:textSize="@dimen/_11sdp"
+        android:textStyle="bold"
+        android:background="@drawable/selected_tab_bg_1"/>
+
+</LinearLayout>
