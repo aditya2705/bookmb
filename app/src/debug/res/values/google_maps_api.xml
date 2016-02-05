@@ -1,0 +1,22 @@
+<resources>
+    <!--
+    TODO: Before you run your application, you need a Google Maps API key.
+
+    To get one, follow this link, follow the directions and press "Create" at the end:
+
+    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=AC:A6:F1:CE:87:7D:7F:3C:8A:5A:EC:22:83:57:07:D6:D3:DF:47:7C%3Bcom.app.bookmybarber.Fragments
+
+    You can also add your credentials to an existing key, using this line:
+    AC:A6:F1:CE:87:7D:7F:3C:8A:5A:EC:22:83:57:07:D6:D3:DF:47:7C;com.app.bookmybarber.Fragments
+
+    Alternatively, follow the directions here:
+    https://developers.google.com/maps/documentation/android/start#get-key
+
+    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+    string in this file.
+    -->
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">
+        AIzaSyCzHe4yLpbiocO18ilJVNtcdd7fy6w6-kE
+
+    </string>
+</resources>
