@@ -329,9 +329,6 @@
     <color name="white_semi_transparent">#22ffffff</color>
     <color name="app_primary_semi_transparent">#77ee602d</color>
 
-    <color name="bg_tab_1">#DFA885</color>
-    <color name="bg_tab_2">#91391A</color>
-    <color name="bg_item_swiping_active_state">#fff</color>
 
     <color name="bg_swipe_item_neutral">#fff</color>
     <color name="bg_swipe_item_dismiss">#fff</color>

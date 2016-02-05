@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="theme_brown">#8D271B</color>
+    <color name="bg_tab_default">#728d271b</color>
+    <color name="bg_tab_selected">#DFA885</color>
+    <color name="bg_item_swiping_active_state">#fff</color>
+</resources>

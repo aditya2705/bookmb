@@ -23,6 +23,7 @@ public class AboutFragment extends Fragment {
     private SmartTabLayout tabs;
     private ViewPager pager;
     private FragmentPagerAdapter adapter;
+    private static final int CONTACT_TAB = 1;
 
     public AboutFragment() {
         // Required empty public constructor
@@ -66,6 +67,9 @@ public class AboutFragment extends Fragment {
         @Override
         public Fragment getItem(int position) {
             switch (position) {
+
+                case CONTACT_TAB:
+                    return new ContactFragment();
 
                 default:
                     return new ServicesFragment();
