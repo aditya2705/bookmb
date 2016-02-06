@@ -10,6 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.app.bookmybarber.Adapters.ServiceItemAdapter;
+import com.app.bookmybarber.Custom.appearance.AnimationAdapter;
+import com.app.bookmybarber.Custom.appearance.simple.ScaleInAnimationAdapter;
 import com.app.bookmybarber.Objects.ServiceItem;
 import com.app.bookmybarber.R;
 import com.nirhart.parallaxscroll.views.ParallaxListView;
@@ -77,9 +79,21 @@ public class ServicesFragment extends Fragment {
         serviceItemArrayList.add(new ServiceItem("Service 5"));
         serviceItemArrayList.add(new ServiceItem("Service 6"));
         serviceItemArrayList.add(new ServiceItem("Service 7"));
+        serviceItemArrayList.add(new ServiceItem("Service 1"));
+        serviceItemArrayList.add(new ServiceItem("Service 2"));
+        serviceItemArrayList.add(new ServiceItem("Service 3"));
+        serviceItemArrayList.add(new ServiceItem("Service 4"));
+        serviceItemArrayList.add(new ServiceItem("Service 5"));
+        serviceItemArrayList.add(new ServiceItem("Service 6"));
+        serviceItemArrayList.add(new ServiceItem("Service 7"));
 
         serviceItemAdapter = new ServiceItemAdapter(getActivity(),R.layout.services_item_layout,serviceItemArrayList);
-        parallaxListView.setAdapter(serviceItemAdapter);
+
+        AnimationAdapter animAdapter;
+        animAdapter = new ScaleInAnimationAdapter(serviceItemAdapter);
+        animAdapter.setAbsListView(parallaxListView);
+
+        parallaxListView.setAdapter(animAdapter);
 
         //getData();
 

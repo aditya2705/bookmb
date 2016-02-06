@@ -36,7 +36,7 @@ public class AboutFragment extends Fragment {
         rootView = inflater.inflate(R.layout.fragment_about, container, false);
 
         tabs = (SmartTabLayout) rootView.findViewById(R.id.tabs);
-        tabs.setCustomTabView(R.layout.custom_smart_tab_view2, R.id.tab_text);
+        tabs.setCustomTabView(R.layout.custom_about_tab, R.id.tab_text);
         pager = (ViewPager) rootView.findViewById(R.id.pager);
         pager.setOffscreenPageLimit(15);
         adapter = new PiePagerAdapter(getChildFragmentManager());

@@ -11,9 +11,9 @@
         android:textColor="@color/md_amber_900"
         android:textSize="@dimen/_20sdp"
         android:textStyle="bold"
-        android:layout_margin="@dimen/_5sdp"
+        android:layout_margin="@dimen/_2sdp"
         android:gravity="center"
-        android:background="@drawable/border_bluish_face"
+        android:background="@drawable/border_face"
         />
 
 </LinearLayout>
