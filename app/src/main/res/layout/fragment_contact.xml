@@ -4,7 +4,7 @@
     xmlns:map="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/contact_background"
+    android:background="@drawable/glass_back"
     android:orientation="vertical"
     android:padding="@dimen/_20sdp">
 
@@ -24,7 +24,7 @@
         android:gravity="left"
         android:text="Schedule an Appointment"
         android:textColor="#ffffffff"
-        android:textSize="@dimen/_14sdp" />
+        android:textSize="@dimen/theme_text_size" />
 
     <com.google.android.gms.maps.MapView
         android:id="@+id/map"
@@ -52,7 +52,7 @@
                 android:paddingTop="@dimen/_2sdp"
                 android:text="Address"
                 android:textColor="#ffffffff"
-                android:textSize="@dimen/_14sdp"
+                android:textSize="@dimen/theme_text_size"
                 android:textStyle="bold" />
 
             <TextView
@@ -62,7 +62,7 @@
                 android:paddingTop="@dimen/_2sdp"
                 android:text="Website"
                 android:textColor="#ffffffff"
-                android:textSize="@dimen/_14sdp"
+                android:textSize="@dimen/theme_text_size"
                 android:textStyle="bold" />
 
             <TextView
@@ -72,7 +72,7 @@
                 android:paddingTop="@dimen/_2sdp"
                 android:text="Email"
                 android:textColor="#ffffffff"
-                android:textSize="@dimen/_14sdp"
+                android:textSize="@dimen/theme_text_size"
                 android:textStyle="bold" />
 
             <TextView
@@ -82,7 +82,7 @@
                 android:paddingTop="@dimen/_2sdp"
                 android:text="Phone"
                 android:textColor="#ffffffff"
-                android:textSize="@dimen/_14sdp"
+                android:textSize="@dimen/theme_text_size"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -100,7 +100,7 @@
                 android:paddingTop="@dimen/_2sdp"
                 android:text="Mumbai, Maharashtra, India"
                 android:textColor="#ffffffff"
-                android:textSize="@dimen/_14sdp" />
+                android:textSize="@dimen/theme_text_size" />
 
             <TextView
                 android:id="@+id/textView2"
@@ -111,7 +111,7 @@
                 android:text="styleme.ly"
                 android:textColor="#ffffffff"
                 android:textColorHighlight="#ffffffff"
-                android:textSize="@dimen/_14sdp" />
+                android:textSize="@dimen/theme_text_size" />
 
             <TextView
                 android:id="@+id/textView"
@@ -121,7 +121,7 @@
                 android:paddingTop="@dimen/_2sdp"
                 android:text="hello@styleme.ly"
                 android:textColor="#ffffffff"
-                android:textSize="@dimen/_14sdp" />
+                android:textSize="@dimen/theme_text_size" />
 
             <TextView
                 android:id="@+id/textView4"
@@ -131,7 +131,7 @@
                 android:paddingTop="@dimen/_2sdp"
                 android:text="+91 9822724720"
                 android:textColor="#ffffffff"
-                android:textSize="@dimen/_14sdp" />
+                android:textSize="@dimen/theme_text_size" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

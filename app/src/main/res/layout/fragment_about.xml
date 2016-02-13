@@ -1,11 +1,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/glass_back"
     android:orientation="vertical"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.app.bookmybarber.Fragments.AboutFragment"
-    android:background="@drawable/contact_background">
+    tools:context="com.app.bookmybarber.Fragments.AboutFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <com.ogaclejapan.smarttablayout.SmartTabLayout

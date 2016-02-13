@@ -18,12 +18,13 @@ import com.ogaclejapan.smarttablayout.SmartTabLayout;
  */
 public class AboutFragment extends Fragment {
 
-    private View rootView;
 
+    private static final int CONTACT_TAB = 1;
+    private static final int HOURS_TAB = 2;
+    private View rootView;
     private SmartTabLayout tabs;
     private ViewPager pager;
     private FragmentPagerAdapter adapter;
-    private static final int CONTACT_TAB = 1;
 
     public AboutFragment() {
         // Required empty public constructor
@@ -70,6 +71,8 @@ public class AboutFragment extends Fragment {
 
                 case CONTACT_TAB:
                     return new ContactFragment();
+                case HOURS_TAB:
+                    return new HoursFragment();
 
                 default:
                     return new ServicesFragment();
