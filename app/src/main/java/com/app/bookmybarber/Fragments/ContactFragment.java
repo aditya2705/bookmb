@@ -45,8 +45,8 @@ public class ContactFragment extends Fragment implements OnMapReadyCallback {
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
      *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
+     * @param param1 Parameter one.
+     * @param param2 Parameter two.
      * @return A new instance of fragment ContactFragment.
      */
     // TODO: Rename and change types and number of parameters

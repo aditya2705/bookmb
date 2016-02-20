@@ -79,13 +79,11 @@ public class ServicesFragment extends Fragment {
         serviceItemArrayList.add(new ServiceItem("Service 5"));
         serviceItemArrayList.add(new ServiceItem("Service 6"));
         serviceItemArrayList.add(new ServiceItem("Service 7"));
-        serviceItemArrayList.add(new ServiceItem("Service 1"));
-        serviceItemArrayList.add(new ServiceItem("Service 2"));
-        serviceItemArrayList.add(new ServiceItem("Service 3"));
-        serviceItemArrayList.add(new ServiceItem("Service 4"));
-        serviceItemArrayList.add(new ServiceItem("Service 5"));
-        serviceItemArrayList.add(new ServiceItem("Service 6"));
-        serviceItemArrayList.add(new ServiceItem("Service 7"));
+        serviceItemArrayList.add(new ServiceItem("Service 8"));
+        serviceItemArrayList.add(new ServiceItem("Service 9"));
+        serviceItemArrayList.add(new ServiceItem("Service 10"));
+        serviceItemArrayList.add(new ServiceItem("Service 11"));
+        serviceItemArrayList.add(new ServiceItem("Service 12"));
 
         serviceItemAdapter = new ServiceItemAdapter(getActivity(),R.layout.services_item_layout,serviceItemArrayList);
 

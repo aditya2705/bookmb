@@ -1,9 +1,48 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.app.bookmybarber.Fragments.HomeFragment">
+    android:layout_height="match_parent">
 
-    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <com.daimajia.androidviewhover.BlurLayout
+            android:id="@+id/left_view"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/left_image"
+                android:layout_centerInParent="true"
+                android:src="@drawable/one"
+                android:scaleType="fitXY"
+                android:padding="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </com.daimajia.androidviewhover.BlurLayout>
+
+        <com.daimajia.androidviewhover.BlurLayout
+            android:id="@+id/right_view"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/right_image"
+                android:layout_centerInParent="true"
+                android:src="@drawable/two"
+                android:scaleType="fitXY"
+                android:padding="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </com.daimajia.androidviewhover.BlurLayout>
+
+    </LinearLayout>
+
 
 </RelativeLayout>

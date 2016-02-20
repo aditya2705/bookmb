@@ -252,7 +252,7 @@ public class ViewAnimator {
     }
 
     /**
-     * Returns the delay in milliseconds after which animation for View with position mLastAnimatedPosition + 1 should start.
+     * Returns the delay in milliseconds after which animation for View with position mLastAnimatedPosition + one should start.
      */
     @SuppressLint("NewApi")
     private int calculateAnimationDelay(final int position) {
