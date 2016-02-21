@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/glass_back">
+
+
+    <ImageView android:src="@drawable/byb"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_75sdp"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="@dimen/_25sdp"
+        android:paddingBottom="@dimen/_25sdp"
+        android:background="@color/app_theme_color"
+        android:adjustViewBounds="true"/>
+
+    <!-- TODO: Update blank fragment layout -->
+    <com.ogaclejapan.smarttablayout.SmartTabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:background="@color/app_theme_color"
+        app:stl_defaultTabTextAllCaps="false"
+        app:stl_defaultTabTextColor="#fff"
+        app:stl_defaultTabTextSize="@dimen/_9sdp"
+        app:stl_distributeEvenly="true"
+        app:stl_dividerColor="@color/md_white_1000"
+        app:stl_dividerThickness="0dp"
+        app:stl_indicatorColor="@color/md_white_1000"
+        app:stl_indicatorInterpolation="linear"
+        app:stl_indicatorThickness="@dimen/_3sdp"
+        app:stl_indicatorCornerRadius="@dimen/_20sdp"
+        app:stl_indicatorGravity="bottom"
+        app:stl_underlineColor="@android:color/transparent"
+        app:stl_underlineThickness="0dp" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

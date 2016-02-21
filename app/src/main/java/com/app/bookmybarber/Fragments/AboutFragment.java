@@ -40,7 +40,7 @@ public class AboutFragment extends Fragment {
         tabs.setCustomTabView(R.layout.custom_about_tab, R.id.tab_text);
         pager = (ViewPager) rootView.findViewById(R.id.pager);
         pager.setOffscreenPageLimit(15);
-        adapter = new PiePagerAdapter(getChildFragmentManager());
+        adapter = new AboutPagerAdapter(getChildFragmentManager());
         pager.setAdapter(adapter);
         tabs.setViewPager(pager);
 
@@ -48,10 +48,10 @@ public class AboutFragment extends Fragment {
         return rootView;
     }
 
-    public class PiePagerAdapter extends FragmentPagerAdapter {
+    public class AboutPagerAdapter extends FragmentPagerAdapter {
         private final String[] tab_names = {"Info", "Contact", "Hours"};
 
-        private PiePagerAdapter(FragmentManager fm) {
+        private AboutPagerAdapter(FragmentManager fm) {
             super(fm);
         }
 
