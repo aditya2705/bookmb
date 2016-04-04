@@ -1,4 +1,4 @@
-package com.app.bookmybarber.Activities;
+package com.app.bookmybarber.activities;
 
 import android.content.pm.ActivityInfo;
 import android.support.v4.app.Fragment;
@@ -7,10 +7,9 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 
-import com.app.bookmybarber.Fragments.SignInFragment;
-import com.app.bookmybarber.Fragments.SignUpFragment;
+import com.app.bookmybarber.fragments.SignInFragment;
+import com.app.bookmybarber.fragments.SignUpFragment;
 import com.app.bookmybarber.R;
 import com.ogaclejapan.smarttablayout.SmartTabLayout;
 

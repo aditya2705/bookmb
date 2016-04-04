@@ -1,4 +1,4 @@
-package com.app.bookmybarber.Fragments;
+package com.app.bookmybarber.fragments;
 
 
 import android.os.Bundle;

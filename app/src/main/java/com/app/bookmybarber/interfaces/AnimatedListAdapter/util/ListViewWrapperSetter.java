@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.app.bookmybarber.Custom.util;
+package com.app.bookmybarber.interfaces.AnimatedListAdapter.util;
 
 import android.support.annotation.NonNull;
 

@@ -13,33 +13,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.app.bookmybarber.Custom.appearance.simple;
+package com.app.bookmybarber.interfaces.AnimatedListAdapter.appearance.simple;
 
 import android.support.annotation.NonNull;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
-import com.app.bookmybarber.Custom.appearance.SingleAnimationAdapter;
+
+import com.app.bookmybarber.interfaces.AnimatedListAdapter.appearance.SingleAnimationAdapter;
 import com.nineoldandroids.animation.Animator;
 import com.nineoldandroids.animation.ObjectAnimator;
 
 /**
  * An implementation of the AnimationAdapter class which applies a
- * swing-in-from-bottom-animation to views.
+ * swing-in-from-the-right-animation to views.
  */
-public class SwingBottomInAnimationAdapter extends SingleAnimationAdapter {
+public class SwingRightInAnimationAdapter extends SingleAnimationAdapter {
 
-    private static final String TRANSLATION_Y = "translationY";
+    private static final String TRANSLATION_X = "translationX";
 
-    public SwingBottomInAnimationAdapter(@NonNull final BaseAdapter baseAdapter) {
+    public SwingRightInAnimationAdapter(@NonNull final BaseAdapter baseAdapter) {
         super(baseAdapter);
     }
 
-    @Override
     @NonNull
+    @Override
     protected Animator getAnimator(@NonNull final ViewGroup parent, @NonNull final View view) {
-        return ObjectAnimator.ofFloat(view, TRANSLATION_Y, parent.getMeasuredHeight() >> 1, 0);
+        return ObjectAnimator.ofFloat(view, TRANSLATION_X, parent.getWidth(), 0);
     }
-
 }

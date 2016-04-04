@@ -1,4 +1,4 @@
-package com.app.bookmybarber.Fragments;
+package com.app.bookmybarber.fragments;
 
 
 import android.os.AsyncTask;
@@ -9,10 +9,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.app.bookmybarber.Adapters.ServiceItemAdapter;
-import com.app.bookmybarber.Custom.appearance.AnimationAdapter;
-import com.app.bookmybarber.Custom.appearance.simple.ScaleInAnimationAdapter;
-import com.app.bookmybarber.Objects.ServiceItem;
+import com.app.bookmybarber.adapters.ServiceItemAdapter;
+import com.app.bookmybarber.interfaces.AnimatedListAdapter.appearance.AnimationAdapter;
+import com.app.bookmybarber.interfaces.AnimatedListAdapter.appearance.simple.ScaleInAnimationAdapter;
+import com.app.bookmybarber.objects.ServiceItemObject;
 import com.app.bookmybarber.R;
 import com.nirhart.parallaxscroll.views.ParallaxListView;
 
@@ -50,7 +50,7 @@ public class ServicesFragment extends Fragment {
     JSONArray servicesJSONArray = null;
 
     private ServiceItemAdapter serviceItemAdapter;
-    private ArrayList<ServiceItem> serviceItemArrayList;
+    private ArrayList<ServiceItemObject> serviceItemObjectArrayList;
 
     private ParallaxListView parallaxListView;
 
@@ -70,22 +70,22 @@ public class ServicesFragment extends Fragment {
 
         parallaxListView = (ParallaxListView)rootView.findViewById(R.id.listView);
 
-        serviceItemArrayList = new ArrayList<>();
+        serviceItemObjectArrayList = new ArrayList<>();
 
-        serviceItemArrayList.add(new ServiceItem("Service 1"));
-        serviceItemArrayList.add(new ServiceItem("Service 2"));
-        serviceItemArrayList.add(new ServiceItem("Service 3"));
-        serviceItemArrayList.add(new ServiceItem("Service 4"));
-        serviceItemArrayList.add(new ServiceItem("Service 5"));
-        serviceItemArrayList.add(new ServiceItem("Service 6"));
-        serviceItemArrayList.add(new ServiceItem("Service 7"));
-        serviceItemArrayList.add(new ServiceItem("Service 8"));
-        serviceItemArrayList.add(new ServiceItem("Service 9"));
-        serviceItemArrayList.add(new ServiceItem("Service 10"));
-        serviceItemArrayList.add(new ServiceItem("Service 11"));
-        serviceItemArrayList.add(new ServiceItem("Service 12"));
+        serviceItemObjectArrayList.add(new ServiceItemObject("Service 1"));
+        serviceItemObjectArrayList.add(new ServiceItemObject("Service 2"));
+        serviceItemObjectArrayList.add(new ServiceItemObject("Service 3"));
+        serviceItemObjectArrayList.add(new ServiceItemObject("Service 4"));
+        serviceItemObjectArrayList.add(new ServiceItemObject("Service 5"));
+        serviceItemObjectArrayList.add(new ServiceItemObject("Service 6"));
+        serviceItemObjectArrayList.add(new ServiceItemObject("Service 7"));
+        serviceItemObjectArrayList.add(new ServiceItemObject("Service 8"));
+        serviceItemObjectArrayList.add(new ServiceItemObject("Service 9"));
+        serviceItemObjectArrayList.add(new ServiceItemObject("Service 10"));
+        serviceItemObjectArrayList.add(new ServiceItemObject("Service 11"));
+        serviceItemObjectArrayList.add(new ServiceItemObject("Service 12"));
 
-        serviceItemAdapter = new ServiceItemAdapter(getActivity(),R.layout.services_item_layout,serviceItemArrayList);
+        serviceItemAdapter = new ServiceItemAdapter(getActivity(),R.layout.services_item_layout, serviceItemObjectArrayList);
 
         AnimationAdapter animAdapter;
         animAdapter = new ScaleInAnimationAdapter(serviceItemAdapter);
@@ -170,12 +170,12 @@ public class ServicesFragment extends Fragment {
                 sizes = c.getString(TAG_SIZES);
                 default_image_url = c.getString(TAG_DEFAULT_IMAGE);
 
-                ServiceItem serviceItem = new ServiceItem(name);
+                ServiceItemObject serviceItemObject = new ServiceItemObject(name);
 
-                serviceItemArrayList.add(serviceItem);
+                serviceItemObjectArrayList.add(serviceItemObject);
             }
 
-            serviceItemAdapter = new ServiceItemAdapter(getActivity(),R.layout.services_item_layout,serviceItemArrayList);
+            serviceItemAdapter = new ServiceItemAdapter(getActivity(),R.layout.services_item_layout, serviceItemObjectArrayList);
             parallaxListView.setAdapter(serviceItemAdapter);
 
         } catch (JSONException e) {

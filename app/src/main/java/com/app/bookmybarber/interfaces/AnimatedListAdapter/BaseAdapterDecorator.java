@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.app.bookmybarber.Custom;
+package com.app.bookmybarber.interfaces.AnimatedListAdapter;
 
 import android.database.DataSetObserver;
 import android.support.annotation.NonNull;
@@ -26,11 +26,11 @@ import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.SectionIndexer;
 
-import com.app.bookmybarber.Custom.util.AbsListViewWrapper;
-import com.app.bookmybarber.Custom.util.Insertable;
-import com.app.bookmybarber.Custom.util.ListViewWrapper;
-import com.app.bookmybarber.Custom.util.ListViewWrapperSetter;
-import com.app.bookmybarber.Custom.util.Swappable;
+import com.app.bookmybarber.interfaces.AnimatedListAdapter.util.AbsListViewWrapper;
+import com.app.bookmybarber.interfaces.AnimatedListAdapter.util.Insertable;
+import com.app.bookmybarber.interfaces.AnimatedListAdapter.util.ListViewWrapper;
+import com.app.bookmybarber.interfaces.AnimatedListAdapter.util.ListViewWrapperSetter;
+import com.app.bookmybarber.interfaces.AnimatedListAdapter.util.Swappable;
 
 /**
  * A decorator class that enables decoration of an instance of the {@link BaseAdapter} class.

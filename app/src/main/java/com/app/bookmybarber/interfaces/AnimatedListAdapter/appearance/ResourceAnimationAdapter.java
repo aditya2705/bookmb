@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.app.bookmybarber.Custom.appearance;
+package com.app.bookmybarber.interfaces.AnimatedListAdapter.appearance;
 
 import android.content.Context;
 import android.view.View;

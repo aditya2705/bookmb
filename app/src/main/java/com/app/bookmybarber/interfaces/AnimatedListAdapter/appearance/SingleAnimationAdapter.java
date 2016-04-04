@@ -13,25 +13,41 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.app.bookmybarber.Custom.appearance.simple;
+package com.app.bookmybarber.interfaces.AnimatedListAdapter.appearance;
 
-import android.support.annotation.NonNull;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
-import com.app.bookmybarber.Custom.appearance.AnimationAdapter;
 import com.nineoldandroids.animation.Animator;
 
-public class AlphaInAnimationAdapter extends AnimationAdapter {
+import android.support.annotation.NonNull;
 
-    public AlphaInAnimationAdapter(@NonNull final BaseAdapter baseAdapter) {
+/**
+ * An implementation of AnimationAdapter which applies a single Animator to
+ * views.
+ */
+public abstract class SingleAnimationAdapter extends AnimationAdapter {
+
+    protected SingleAnimationAdapter(@NonNull final BaseAdapter baseAdapter) {
         super(baseAdapter);
     }
 
     @NonNull
     @Override
     public Animator[] getAnimators(@NonNull final ViewGroup parent, @NonNull final View view) {
-        return new Animator[0];
+        Animator animator = getAnimator(parent, view);
+        return new Animator[]{animator};
     }
+
+    /**
+     * Get the {@link Animator} to apply to the {@link View}.
+     *
+     * @param parent the {@link ViewGroup} which is the parent of the View.
+     * @param view   the View that will be animated, as retrieved by
+     *               {@link #getView(int, View, ViewGroup)}.
+     */
+    @NonNull
+    protected abstract Animator getAnimator(@NonNull ViewGroup parent, @NonNull View view);
+
 }

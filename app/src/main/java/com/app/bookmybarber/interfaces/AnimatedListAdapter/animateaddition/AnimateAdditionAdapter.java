@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.app.bookmybarber.Custom.animateaddition;
+package com.app.bookmybarber.interfaces.AnimatedListAdapter.animateaddition;
 
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -27,9 +27,9 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 
 
-import com.app.bookmybarber.Custom.BaseAdapterDecorator;
-import com.app.bookmybarber.Custom.util.AbsListViewWrapper;
-import com.app.bookmybarber.Custom.util.Insertable;
+import com.app.bookmybarber.interfaces.AnimatedListAdapter.BaseAdapterDecorator;
+import com.app.bookmybarber.interfaces.AnimatedListAdapter.util.AbsListViewWrapper;
+import com.app.bookmybarber.interfaces.AnimatedListAdapter.util.Insertable;
 import com.nineoldandroids.animation.Animator;
 import com.nineoldandroids.animation.AnimatorListenerAdapter;
 import com.nineoldandroids.animation.AnimatorSet;

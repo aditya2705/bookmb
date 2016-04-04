@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.app.bookmybarber.Custom.appearance;
+package com.app.bookmybarber.interfaces.AnimatedListAdapter.appearance;
 
 import android.os.Bundle;
 import android.os.Parcelable;
@@ -23,9 +23,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
-import com.app.bookmybarber.Custom.BaseAdapterDecorator;
-import com.app.bookmybarber.Custom.util.AnimatorUtil;
-import com.app.bookmybarber.Custom.util.ListViewWrapper;
+import com.app.bookmybarber.interfaces.AnimatedListAdapter.BaseAdapterDecorator;
+import com.app.bookmybarber.interfaces.AnimatedListAdapter.util.AnimatorUtil;
+import com.app.bookmybarber.interfaces.AnimatedListAdapter.util.ListViewWrapper;
 import com.nineoldandroids.animation.Animator;
 import com.nineoldandroids.animation.ObjectAnimator;
 

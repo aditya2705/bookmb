@@ -5,7 +5,7 @@
     android:background="@drawable/glass_back"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    tools:context="com.app.bookmybarber.Fragments.HoursFragment">
+    tools:context="com.app.bookmybarber.fragments.HoursFragment">
 
     <!-- TODO: Update blank fragment layout -->
 

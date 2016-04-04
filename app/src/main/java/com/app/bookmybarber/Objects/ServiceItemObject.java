@@ -1,13 +1,13 @@
-package com.app.bookmybarber.Objects;
+package com.app.bookmybarber.objects;
 
 /**
  * Created by Aditya Rathi on 03-Feb-16.
  */
-public class ServiceItem {
+public class ServiceItemObject {
 
     private String serviceName;
 
-    public ServiceItem(String serviceName) {
+    public ServiceItemObject(String serviceName) {
         this.serviceName = serviceName;
     }
 

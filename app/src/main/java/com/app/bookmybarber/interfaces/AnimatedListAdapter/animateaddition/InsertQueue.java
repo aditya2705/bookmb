@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.app.bookmybarber.Custom.animateaddition;
+package com.app.bookmybarber.interfaces.AnimatedListAdapter.animateaddition;
 
 import android.support.annotation.NonNull;
 import android.util.Pair;
 
 
-import com.app.bookmybarber.Custom.util.Insertable;
+import com.app.bookmybarber.interfaces.AnimatedListAdapter.util.Insertable;
 
 import java.util.ArrayList;
 import java.util.Arrays;

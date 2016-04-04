@@ -1,4 +1,4 @@
-package com.app.bookmybarber.Fragments;
+package com.app.bookmybarber.fragments;
 
 
 import android.content.Intent;
@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.app.bookmybarber.Activities.ServiceListActivity;
+import com.app.bookmybarber.activities.ServiceListActivity;
 import com.app.bookmybarber.R;
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidviewhover.BlurLayout;

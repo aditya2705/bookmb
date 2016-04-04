@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.app.bookmybarber.Custom.appearance;
+package com.app.bookmybarber.interfaces.AnimatedListAdapter.appearance;
 
 import android.annotation.SuppressLint;
 import android.os.Build;
@@ -27,7 +27,7 @@ import android.util.SparseArray;
 import android.view.View;
 import android.widget.GridView;
 
-import com.app.bookmybarber.Custom.util.ListViewWrapper;
+import com.app.bookmybarber.interfaces.AnimatedListAdapter.util.ListViewWrapper;
 import com.nineoldandroids.animation.Animator;
 import com.nineoldandroids.animation.AnimatorSet;
 import com.nineoldandroids.view.ViewHelper;

@@ -1,11 +1,11 @@
-package com.app.bookmybarber.Activities;
+package com.app.bookmybarber.activities;
 
 import android.content.pm.ActivityInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 
-import com.app.bookmybarber.Fragments.ServicesFragment;
+import com.app.bookmybarber.fragments.ServicesFragment;
 import com.app.bookmybarber.R;
 
 public class ServiceListActivity extends AppCompatActivity {

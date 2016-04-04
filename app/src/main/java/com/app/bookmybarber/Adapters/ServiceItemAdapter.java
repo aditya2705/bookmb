@@ -1,4 +1,4 @@
-package com.app.bookmybarber.Adapters;
+package com.app.bookmybarber.adapters;
 
 import java.util.ArrayList;
 
@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import com.app.bookmybarber.Objects.ServiceItem;
+import com.app.bookmybarber.objects.ServiceItemObject;
 import com.app.bookmybarber.R;
 
 /**
@@ -18,13 +18,13 @@ import com.app.bookmybarber.R;
  * @author Sumeet
  *
  */
-public class ServiceItemAdapter extends ArrayAdapter<ServiceItem> {
+public class ServiceItemAdapter extends ArrayAdapter<ServiceItemObject> {
     Context context;
     int layoutResourceId;
-    ArrayList<ServiceItem> data = new ArrayList<ServiceItem>();
+    ArrayList<ServiceItemObject> data = new ArrayList<ServiceItemObject>();
 
     public ServiceItemAdapter(Context context, int layoutResourceId,
-                              ArrayList<ServiceItem> data) {
+                              ArrayList<ServiceItemObject> data) {
         super(context, layoutResourceId, data);
         this.layoutResourceId = layoutResourceId;
         this.context = context;
@@ -48,7 +48,7 @@ public class ServiceItemAdapter extends ArrayAdapter<ServiceItem> {
         }
 
 
-        ServiceItem item = data.get(position);
+        ServiceItemObject item = data.get(position);
         holder.serviceName.setText(item.getServiceName());
 
         return row;
