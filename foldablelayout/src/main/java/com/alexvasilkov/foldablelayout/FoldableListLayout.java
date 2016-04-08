@@ -33,7 +33,7 @@ public class FoldableListLayout extends FrameLayout {
 
     private static final long ANIMATION_DURATION_PER_ITEM = 600L;
     private static final float MIN_FLING_VELOCITY = 600f;
-    private static final float DEFAULT_SCROLL_FACTOR = 1.33f;
+    private static final float DEFAULT_SCROLL_FACTOR = 0f;
 
     private static final LayoutParams PARAMS =
             new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
@@ -106,20 +106,19 @@ public class FoldableListLayout extends FrameLayout {
         gestureDetector = new GestureDetector(context, new SimpleOnGestureListener() {
             @Override
             public boolean onDown(MotionEvent event) {
-                return FoldableListLayout.this.onDown();
+                return false;
             }
 
             @Override
             public boolean onScroll(MotionEvent e1, MotionEvent e2, float distX, float distY) {
-                return FoldableListLayout.this.onScroll(e1, e2);
+                return false;
             }
 
             @Override
             public boolean onFling(MotionEvent e1, MotionEvent e2, float velX, float velY) {
-                return FoldableListLayout.this.onFling(velY);
+                return false;
             }
         });
-        gestureDetector.setIsLongpressEnabled(false);
         animator = ObjectAnimator.ofFloat(this, "foldRotation", 0f);
         minDistanceBeforeScroll = ViewConfiguration.get(context).getScaledTouchSlop();
 

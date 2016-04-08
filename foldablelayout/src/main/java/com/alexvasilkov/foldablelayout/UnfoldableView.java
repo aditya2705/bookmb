@@ -18,8 +18,6 @@ import android.widget.FrameLayout;
  */
 public class UnfoldableView extends FoldableListLayout {
 
-    private static final float DEFAULT_SCROLL_FACTOR = 2f;
-
     private static final int STATE_FOLDED = 0;
     private static final int STATE_UNFOLDING = 1;
     private static final int STATE_UNFOLDED = 2;
@@ -77,7 +75,6 @@ public class UnfoldableView extends FoldableListLayout {
         defaultCoverPlaceHolderView = new View(context);
         adapter = new Adapter();
 
-        setScrollFactor(DEFAULT_SCROLL_FACTOR);
     }
 
     public void setOnFoldingListener(OnFoldingListener listener) {

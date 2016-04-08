@@ -13,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.alexvasilkov.foldablelayout.UnfoldableView;
 import com.app.bookmybarber.fragments.ServicesFragment;
 import com.app.bookmybarber.R;
 import com.mikepenz.fontawesome_typeface_library.FontAwesome;
@@ -125,5 +126,18 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed() {
+        if(getSupportFragmentManager().findFragmentById(R.id.fragment_container) instanceof ServicesFragment){
+            UnfoldableView mUnfoldableView = ((ServicesFragment)getSupportFragmentManager().findFragmentById(R.id.fragment_container)).mUnfoldableView;
+            if (mUnfoldableView != null && (mUnfoldableView.isUnfolded() || mUnfoldableView.isUnfolding())) {
+                mUnfoldableView.foldBack();
+            } else {
+                super.onBackPressed();
+            }
+        }
+
     }
 }

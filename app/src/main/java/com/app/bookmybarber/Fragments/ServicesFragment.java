@@ -5,9 +5,11 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.alexvasilkov.foldablelayout.UnfoldableView;
 import com.app.bookmybarber.adapters.ServicesRecyclerAdapter;
@@ -33,7 +35,7 @@ public class ServicesFragment extends Fragment {
     @Bind(R.id.recyclerView) RecyclerView recyclerView;
     @Bind(R.id.touch_interceptor_view) View  mListTouchInterceptor;
     @Bind(R.id.details_layout) View detailsLayout;
-    @Bind(R.id.unfoldable_view) UnfoldableView mUnfoldableView;
+    @Bind(R.id.unfoldable_view) public UnfoldableView mUnfoldableView;
 
     private ServicesRecyclerAdapter servicesRecyclerAdapter;
     private ArrayList<ServiceItemObject> serviceItemObjectArrayList;
@@ -79,7 +81,7 @@ public class ServicesFragment extends Fragment {
         recyclerView.addOnItemTouchListener(new RecyclerItemClickListener(getActivity(), new RecyclerItemClickListener.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
-                //mUnfoldableView.unfold(view, view.findViewById(R.id.image));
+                mUnfoldableView.unfold(view.findViewById(R.id.item_card_view), detailsLayout);
             }
         }));
 
@@ -104,6 +106,7 @@ public class ServicesFragment extends Fragment {
             @Override
             public void onFoldedBack(UnfoldableView unfoldableView) {
                 mListTouchInterceptor.setClickable(false);
+                detailsLayout.findViewById(R.id.scrollView).scrollTo(0,0);
                 detailsLayout.setVisibility(View.INVISIBLE);
             }
         });
