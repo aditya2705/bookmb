@@ -2,20 +2,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.app.bookmybarber.fragments.ServicesFragment">
+    android:orientation="vertical">
 
     <!-- TODO: Update blank fragment layout -->
-    <com.nirhart.parallaxscroll.views.ParallaxListView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        app:parallax_factor="5"
-        app:circular_parallax="true"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/listView"
-        android:divider="@android:color/transparent"
-        android:dividerHeight="0dp"
-        android:paddingLeft="5dp"
-        android:transcriptMode="alwaysScroll"
-        android:windowSoftInputMode="adjustPan" />
+        android:layout_height="match_parent"
+        tools:listitem="@layout/services_item_layout" />
+
+    <View
+        android:id="@+id/touch_interceptor_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <include
+        android:id="@+id/details_layout"
+        layout="@layout/service_details_layout" />
+
+
+    <com.alexvasilkov.foldablelayout.UnfoldableView
+        android:id="@+id/unfoldable_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 </FrameLayout>

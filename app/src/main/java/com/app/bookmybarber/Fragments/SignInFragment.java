@@ -12,8 +12,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.app.bookmybarber.activities.MainActivity;
 import com.app.bookmybarber.R;
+import com.app.bookmybarber.activities.MainActivity;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
