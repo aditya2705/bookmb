@@ -1,17 +1,21 @@
 package com.app.bookmybarber.fragments;
 
-
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.alexvasilkov.foldablelayout.UnfoldableView;
+import com.app.bookmybarber.activities.MainActivity;
 import com.app.bookmybarber.adapters.ServicesRecyclerAdapter;
 import com.app.bookmybarber.interfaces.RecyclerItemClickListener;
 import com.app.bookmybarber.objects.ServiceItemObject;
@@ -36,6 +40,9 @@ public class ServicesFragment extends Fragment {
     @Bind(R.id.touch_interceptor_view) View  mListTouchInterceptor;
     @Bind(R.id.details_layout) View detailsLayout;
     @Bind(R.id.unfoldable_view) public UnfoldableView mUnfoldableView;
+    @Bind(R.id.cross_icon) ImageView crossIconView;
+
+    private MainActivity mainActivity;
 
     private ServicesRecyclerAdapter servicesRecyclerAdapter;
     private ArrayList<ServiceItemObject> serviceItemObjectArrayList;
@@ -91,6 +98,8 @@ public class ServicesFragment extends Fragment {
             public void onUnfolding(UnfoldableView unfoldableView) {
                 mListTouchInterceptor.setClickable(true);
                 detailsLayout.setVisibility(View.VISIBLE);
+                mainActivity.menu.getItem(0).setVisible(false);
+                mainActivity.menu.getItem(1).setVisible(false);
             }
 
             @Override
@@ -108,10 +117,26 @@ public class ServicesFragment extends Fragment {
                 mListTouchInterceptor.setClickable(false);
                 detailsLayout.findViewById(R.id.scrollView).scrollTo(0,0);
                 detailsLayout.setVisibility(View.INVISIBLE);
+                mainActivity.menu.getItem(0).setVisible(true);
+                mainActivity.menu.getItem(1).setVisible(true);
+            }
+        });
+
+        crossIconView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(mUnfoldableView.isUnfolded()){
+                    mUnfoldableView.foldBack();
+                }
             }
         });
 
         return rootView;
     }
 
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        mainActivity = (MainActivity)activity;
+    }
 }

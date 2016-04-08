@@ -24,7 +24,7 @@
 
         <ImageView
             android:layout_toRightOf="@+id/icon"
-            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_12sdp"
             android:layout_width="@dimen/_120sdp"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"

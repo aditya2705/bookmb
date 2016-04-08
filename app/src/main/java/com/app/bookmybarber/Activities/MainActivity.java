@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     @Bind(R.id.toolbar) Toolbar mToolbar;
 
     private Drawer drawer = null;
+    public Menu menu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
+        this.menu = menu;
         return true;
     }
 
@@ -138,6 +140,7 @@ public class MainActivity extends AppCompatActivity {
                 super.onBackPressed();
             }
         }
+
 
     }
 }
